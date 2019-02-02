@@ -2,7 +2,7 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="System Testing" parallel="tests" thread-count="11">
     <parameter name="browser" value="chrome" />
-    <parameter name="url" value="https://10.192.97.82/ui/" />
+    <parameter name="url" value="https://10.172.46.208/ui/" />
 	<parameter name="userName" value="administrator@vsphere.local" />
 	<parameter name="password" value="Admin!23" />
 	

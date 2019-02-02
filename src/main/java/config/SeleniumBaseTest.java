@@ -70,11 +70,16 @@ public class SeleniumBaseTest {
 
 	public void startBrowser() {
 		if (getBrowser().toUpperCase().equals("CHROME")) {
-			WebDriverManager.chromedriver().setup();
-			extent.setSystemInfo("Chrome version", WebDriverManager
-					.chromedriver().getDownloadedVersion());
-			extent.setSystemInfo("Chrome path", WebDriverManager.chromedriver()
-					.getBinaryPath());
+//			WebDriverManager.chromedriver().setup();
+//			extent.setSystemInfo("Chrome version", WebDriverManager
+//					.chromedriver().getDownloadedVersion());
+//			extent.setSystemInfo("Chrome path", WebDriverManager.chromedriver()
+//					.getBinaryPath());
+			String projectPath = System.getProperty("user.dir");
+			String projectPathToTheDriver = "/src/main/resources/";
+			String driverPath=projectPath+projectPathToTheDriver+"chromedriver.exe";
+			System.out.println("Anil "+ driverPath);
+			System.setProperty("webdriver.chrome.driver",driverPath);
 			driver = new ChromeDriver();
 		} else if (getBrowser().toUpperCase().equals("IE")) {
 			WebDriverManager.iedriver().setup();
